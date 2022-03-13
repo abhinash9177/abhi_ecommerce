@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "668167511365",
+    "project_id": "abhi-ecommerce-74054",
+    "storage_bucket": "abhi-ecommerce-74054.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668167511365:android:8e71218d6a9a42d8fb722c",
+        "android_client_info": {
+          "package_name": "com.example.abhi_ecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668167511365-9geca5g5nlcqg2s2sr00sv6uav0silgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrujf3x8P4wfmIf0lggG6CunIFn3gSyV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "668167511365-9geca5g5nlcqg2s2sr00sv6uav0silgu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
