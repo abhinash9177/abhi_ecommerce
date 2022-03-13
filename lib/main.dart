@@ -1,10 +1,7 @@
 import 'package:abhi_ecommerce/authentication_page.dart';
-import 'package:abhi_ecommerce/firebase/firebase_api.dart';
 import 'package:abhi_ecommerce/firebase/firebase_service.dart';
 import 'package:abhi_ecommerce/firebase/services.dart';
 import 'package:abhi_ecommerce/firebase/user_products.dart';
-import 'package:abhi_ecommerce/homepage.dart';
-import 'package:abhi_ecommerce/myproviders/user_provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';

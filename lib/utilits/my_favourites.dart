@@ -127,7 +127,7 @@ class _ShowCartPageState extends State<FavouritesPage> {
                 top: -2,
                 child: IconButton(
                     onPressed: () {
-                      _removeFav(single.id);
+                      _removeFav(single.id, single.price);
                     },
                     icon: const Icon(Icons.favorite)),
               ),
@@ -136,11 +136,12 @@ class _ShowCartPageState extends State<FavouritesPage> {
         ));
   }
 
-  _removeFav(productId) {
+  _removeFav(productId, int price) {
     Provider.of<UserProducts>(context, listen: false).addToFavourites(
         Provider.of<AthenticationService>(context, listen: false)
             .currentUserUid!
             .uid,
-        productId);
+        productId,
+        price);
   }
 }

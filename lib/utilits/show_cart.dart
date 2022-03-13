@@ -3,7 +3,6 @@ import 'package:abhi_ecommerce/firebase/services.dart';
 import 'package:abhi_ecommerce/firebase/user_products.dart';
 import 'package:abhi_ecommerce/models/cart_model.dart';
 import 'package:abhi_ecommerce/models/my_model.dart';
-import 'package:abhi_ecommerce/myproviders/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class UserProducts {
-  Future<void> addToCart(useruid, productId, productname) async {
+  Future<void> addToCart(useruid, productId, productname, int price) async {
     FirebaseFirestore.instance
         .collection('users')
         .doc(useruid)
@@ -23,6 +23,7 @@ class UserProducts {
               id: addcartData.id,
               name: productname,
               productId: productId,
+              price: price,
               category: 'electronics',
               quantity: 1);
           final json = products.toJson();
@@ -71,7 +72,7 @@ class UserProducts {
         .delete();
   }
 
-  Future<void> addToFavourites(useruid, productId) async {
+  Future<void> addToFavourites(useruid, productId, price) async {
     print('favourite add fav id is: $useruid');
     print('favourite add fav id is: $productId');
     try {
@@ -100,6 +101,7 @@ class UserProducts {
               id: addcartData.id,
               name: 'google',
               productId: productId,
+              price: price,
               category: 'electronics',
               quantity: 1);
           final json = products.toJson();

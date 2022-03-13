@@ -1,8 +1,8 @@
 import 'package:abhi_ecommerce/firebase/services.dart';
 import 'package:abhi_ecommerce/firebase/user_products.dart';
 import 'package:abhi_ecommerce/models/my_model.dart';
-import 'package:abhi_ecommerce/myproviders/cart_symbol.dart';
-import 'package:abhi_ecommerce/myproviders/show_cart.dart';
+import 'package:abhi_ecommerce/utilits/cart_symbol.dart';
+import 'package:abhi_ecommerce/utilits/show_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -97,8 +97,8 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
             const SizedBox(height: 10),
             ElevatedButton(
                 onPressed: () {
-                  Provider.of<UserProducts>(context, listen: false)
-                      .addToCart(authuser, single.id, single.name);
+                  Provider.of<UserProducts>(context, listen: false).addToCart(
+                      authuser, single.id, single.name, single.price);
                 },
                 child: const SizedBox(
                   height: 30,
