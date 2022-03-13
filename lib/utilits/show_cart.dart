@@ -109,7 +109,7 @@ class _ShowCartPageState extends State<ShowCartPage> {
                           height: 50,
                           child: Center(
                               child: Text(
-                            'Price:  ₹.${single.price.toString()}',
+                            'Price:  ₹ ${single.price.toString()}',
                             style: const TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ))),

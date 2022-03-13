@@ -51,7 +51,8 @@ class _DisplyProductState extends State<DisplyProduct> {
                       )),
                   const SizedBox(height: 5),
                   SizedBox(
-                      height: 20, child: Text(widget.snap.price.toString())),
+                      height: 20,
+                      child: Text('₹ ${widget.snap.price.toString()}')),
                   const SizedBox(height: 10),
                   SizedBox(
                       height: 20,

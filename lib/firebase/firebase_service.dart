@@ -1,5 +1,4 @@
 import 'package:abhi_ecommerce/models/my_model.dart';
-import 'package:abhi_ecommerce/models/product_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class MyUserDataStore {
