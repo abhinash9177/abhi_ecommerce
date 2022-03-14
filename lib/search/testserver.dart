@@ -7,7 +7,6 @@ class ConsultancyDatabase {
       FirebaseFirestore.instance.collection("products");
 
   Future<List<Product>> getData(query) async {
-    //String query = 'my name';
     try {
       await collectionRef.get().then((querySnapshot) {
         for (var result in querySnapshot.docs.where((element) {

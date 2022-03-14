@@ -90,7 +90,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     height: 50,
                     child: Center(
                         child: Text(
-                      'Price:  ₹.${single.price.toString()}',
+                      'Price:  ₹ ${single.price.toString()}',
                       style: const TextStyle(
                           fontSize: 18, fontWeight: FontWeight.bold),
                     )))),

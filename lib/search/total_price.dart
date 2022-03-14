@@ -24,8 +24,16 @@ class _ShowTotalPriceState extends State<ShowTotalPrice> {
             return Text('0');
           } else {
             final snap = snapshot.data!;
+            int totoalprice = 0;
+            for (int i = 0; i < snap.length; i++) {
+              int pricequantity = snap[i].price * snap[i].quantity;
 
-            return showMyCart(snap);
+              totoalprice = totoalprice + pricequantity;
+            }
+
+            return Text('Your total bill is: ₹ ${totoalprice.toString()}',
+                style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold));
           }
         } else {
           return Text('0');
@@ -34,21 +42,23 @@ class _ShowTotalPriceState extends State<ShowTotalPrice> {
     );
   }
 
-  ListView showMyCart(List<CartModel> snap) {
-    return ListView.builder(
-        itemCount: snap.length,
-        itemBuilder: (context, index) {
-          int totoalprice = 0;
-          for (int i = 0; i <= snap.length; i++) {
-            print('my price is: ${snap[index].price}');
-            print('my quantity is: ${snap[index].quantity}');
-            int pricequantity = snap[index].price * snap[index].quantity;
-            totoalprice = totoalprice + pricequantity;
-          }
-          return Text(
-            totoalprice.toString(),
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          );
-        });
-  }
+  // ListView showMyCart(List<CartModel> snap) {
+  //   return ListView.builder(
+  //       itemCount: snap.length,
+  //       itemBuilder: (context, index) {
+  //         int totoalprice = 0;
+  //         for (int i = 0; i <= snap.length; i++) {
+  //           // print('my price is: ${snap[index].price}');
+  //           // print('my quantity is: ${snap[index].quantity}');
+  //           int pricequantity = snap[index].price * snap[index].quantity;
+  //           // print(
+  //           //     'price quantity: ${snap[index].name} is:  ${pricequantity.toString()}');
+  //           totoalprice = totoalprice + pricequantity;
+  //         }
+  //         return Text(
+  //           totoalprice.toString(),
+  //           style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+  //         );
+  //       });
+  // }
 }

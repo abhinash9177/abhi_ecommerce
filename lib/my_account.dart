@@ -1,5 +1,6 @@
 import 'package:abhi_ecommerce/authentication_page.dart';
 import 'package:abhi_ecommerce/firebase/services.dart';
+import 'package:abhi_ecommerce/search/total_price.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -21,6 +22,12 @@ class MyAccountPage extends StatelessWidget {
             const Text('You are now logged In'),
             const SizedBox(
               height: 30,
+            ),
+            const SizedBox(
+              height: 20,
+              child: Center(
+                child: ShowTotalPrice(),
+              ),
             ),
             const SizedBox(
               height: 30,

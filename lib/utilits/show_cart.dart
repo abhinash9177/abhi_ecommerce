@@ -3,6 +3,7 @@ import 'package:abhi_ecommerce/firebase/services.dart';
 import 'package:abhi_ecommerce/firebase/user_products.dart';
 import 'package:abhi_ecommerce/models/cart_model.dart';
 import 'package:abhi_ecommerce/models/my_model.dart';
+import 'package:abhi_ecommerce/search/total_price.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -33,7 +34,31 @@ class _ShowCartPageState extends State<ShowCartPage> {
                 );
               } else {
                 final snap = snapshot.data!;
-                return showMyCart(snap);
+                return ListView(
+                  children: [
+                    showMyCart(snap),
+                    const SizedBox(height: 20),
+                    const SizedBox(
+                      height: 40,
+                      child: Center(
+                        child: ShowTotalPrice(),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Center(
+                      child: SizedBox(
+                        height: 40,
+                        width: 150,
+                        child: ElevatedButton(
+                            onPressed: () {
+                              null;
+                            },
+                            child: const Text('Pay Now')),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                );
               }
             } else {
               return const Center(
@@ -46,6 +71,8 @@ class _ShowCartPageState extends State<ShowCartPage> {
 
   ListView showMyCart(List<CartModel> snap) {
     return ListView.builder(
+        physics: const ScrollPhysics(),
+        shrinkWrap: true,
         itemCount: snap.length,
         itemBuilder: (context, index) {
           return singleProductCard(snap, index);
